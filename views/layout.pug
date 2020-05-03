@@ -4,14 +4,26 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title= title
+    link(rel="stylesheet", href="./sheets/output.css")
   body
     header
       ul
         li
           a(href="/") Index
 
+    block messages
+      if locals.flashes
+        .flash-messages
+          -const categories = Object.keys(locals.flashes)
+          each category in categories
+            each message in flashes[category]
+              .flash(class=`flash--${category}`)
+                p= message
+                button(onClick="this.parentElement.remove()") X
 
     block content
+
+
 
     footer
       p Copyright 2020

@@ -2,6 +2,6 @@ extends layout
 include mixins/_animeCard
 block content
   .container
-    h2 Cool? #{cool}
-    each anime in results
+    each anime,index in results
+      h3= index
       +animeCard(anime)
