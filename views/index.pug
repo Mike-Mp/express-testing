@@ -1,24 +1,31 @@
 extends layout
 
 block content
-  .w-full.max-w-xs.mx-auto
+  .w-full.max-w-lg.mx-auto
     form(action="/data" method="GET" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4")
       label(for="searchTerm" class="block text-gray-700 text-sm font-bold mb-2") Search
-      input(type="text" id="searchTerm" name="searchTerm" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
-      label(for="limit") Result limit(16 is default)
-      input(type="number" id="limit" name="limit" class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline")
-      label Types:
-      input(type="radio" id="type_ova" name="type" value="ova")
-      label(for="type_ova") OVA
-      input(type="radio" id="type_tv" name="type" value="tv")
-      label(for="type_tv") TV
-      input(type="radio" id="type_movie" name="type" value="movie")
-      label(for="type_movie") Movie
-      input(type="radio" id="type_special" name="type" value="special")
-      label(for="type_special") Special
-      input(type="radio" id="type_one" name="type" value="ona")
-      label(for="type_ona") Ona
-      input(type="radio" id="type_music" name="type" value="music")
-      label(for="type_music") Music
+      input(type="text" id="searchTerm" name="searchTerm" required class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
+      label(for="limit" class="block text-gray-700 text-sm font-bold mb-2") Result limit(16 is default)
+      input(type="number" id="limit" name="limit" class="shadow border rounded w-40 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline")
+      label(class="block text-gray-700 text-sm font-bold mb-2") Types:
+      div(class="grid grid-cols-2 ")
+        div()
+          input(type="radio" id="type_ova" name="type" value="ova" class="px-4 py-2 m-2")
+          label(for="type_ova" ) OVA
+        div()
+          input(type="radio" id="type_tv" name="type" value="tv" class="px-4 py-2 m-2")
+          label(for="type_tv") TV
+        div()
+          input(type="radio" id="type_movie" name="type" value="movie" class="px-4 py-2 m-2")
+          label(for="type_movie") Movie
+        div()
+          input(type="radio" id="type_special" name="type" value="special" class="px-4 py-2 m-2")
+          label(for="type_special") Special
+        div()
+          input(type="radio" id="type_one" name="type" value="ona" class="px-4 py-2 m-2")
+          label(for="type_ona") Ona
+        div()
+          input(type="radio" id="type_music" name="type" value="music" class="px-4 py-2 m-2")
+          label(for="type_music") Music
       button(type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded") Submit
   
