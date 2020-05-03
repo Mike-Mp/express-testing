@@ -1,0 +1,1 @@
+"use strict";var express=require("express"),app=express(),routes=require("./routes/routes");app.use(express.json()),app.use(express.urlencoded({extended:!0})),app.use(express.static("public")),app.set("view engine","pug"),app.use("/",routes),module.exports=app;

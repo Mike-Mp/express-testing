@@ -1,0 +1,7 @@
+extends layout
+include mixins/_animeCard
+block content
+  .container
+    h2 Cool? #{cool}
+    each anime in results
+      +animeCard(anime)

@@ -1,0 +1,8 @@
+mixin animeCard(anime)
+  img(src= anime.image_url alt= anime.title)
+  a(href= anime.url)
+    h2= anime.title
+  p= anime.synopsis
+  p= anime.type
+  p= anime.episodes.toString()
+  p= anime.score.toString()

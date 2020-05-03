@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  form(action="/data" method="GET")
+    label(for="searchTerm") Search
+    input(type="text" id="searchTerm" name="searchTerm" required)
+    button(type="submit") Submit
+  
