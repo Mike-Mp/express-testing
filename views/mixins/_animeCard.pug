@@ -1,5 +1,5 @@
 mixin animeCard(anime)
-  .container.border-8.border-double
+  .container.border-8.border-double.mb-10
     table(class="")
       tbody
         tr
@@ -24,7 +24,10 @@ mixin animeCard(anime)
               tbody
                 tr
                   td
-                    h2(class="")= anime.title
-                    h3.border-b.border-solid Synopsis
+                    h2(class="font-bold text-gray-900")= anime.title
+                    div(class="bg-blue-300 w-16 text-center")
+                      h3(class="font-medium border-b italic text-gray-800") SCORE
+                      p(class="text-sm font-medium")= anime.score
+                    h3(class="border-b font-bold text-gray-800") Synopsis
                     p= anime.synopsis
-    
+                
