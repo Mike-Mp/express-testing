@@ -30,8 +30,9 @@ mixin animeCard(anime)
                         h3(class="font-medium border-b italic text-gray-800") SCORE
                         p(class="text-sm font-medium")= anime.score.toString()
                       div(class="ml-6")
+                        - function formatNumber(n) {return n.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
                         h3(class="font-medium border-b italic text-gray-800") MEMBERS
-                        p(class="text-sm font-medium")= anime.members.toString()
+                        p(class="text-sm font-medium")= formatNumber(anime.members)
                       div(class="ml-6")
                         h3(class="font-medium border-b italic text-gray-800") RATED
                         p(class="text-sm font-medium")= anime.rated
