@@ -1,5 +1,5 @@
 mixin animeCard(anime)
-  .container.bg-teal-100.border-8.border-double
+  .container.bg-teal-400.border-8.border-double
     table(class="")
       tbody
         tr
@@ -8,8 +8,10 @@ mixin animeCard(anime)
               img(src= anime.image_url alt= anime.title)
             h2(class="")= anime.title
           td(class="border px-4 py-2")
-            p= anime.synopsis
-            p= anime.type
-            p= anime.episodes.toString()
-            p= anime.score.toString() 
+            table
+              tbody
+                tr
+                  td
+                    h2.border-b.border-solid Synopsis
+                    p= anime.synopsis
     

@@ -33,8 +33,7 @@ app.use(function (req, res, next) {
   res.locals.h = "LEL";
   res.locals.flashes = req.flash();
   next();
-});
-console.log(app.locals); // routes
+}); // routes
 
 app.use("/", routes); // error middleware
 // export

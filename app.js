@@ -30,7 +30,6 @@ app.use((req, res, next) => {
   next();
 });
 
-console.log(app.locals);
 // routes
 app.use("/", routes);
 // error middleware
