@@ -1,8 +1,15 @@
 mixin animeCard(anime)
-  img(src= anime.image_url alt= anime.title)
-  a(href= anime.url)
-    h2= anime.title
-  p= anime.synopsis
-  p= anime.type
-  p= anime.episodes.toString()
-  p= anime.score.toString()
+  .container.bg-teal-100.border-8.border-double
+    table(class="")
+      tbody
+        tr
+          td(class="border px-4 py-2")
+            a(href= anime.url )
+              img(src= anime.image_url alt= anime.title)
+            h2(class="")= anime.title
+          td(class="border px-4 py-2")
+            p= anime.synopsis
+            p= anime.type
+            p= anime.episodes.toString()
+            p= anime.score.toString() 
+    

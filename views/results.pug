@@ -1,7 +1,8 @@
 extends layout
 include mixins/_animeCard
 block content
-  .container
+  .container.mx-auto.mt-4.p-4
     each anime,index in results
-      h3= index
-      +animeCard(anime)
+      .container
+        h3(class="border border-transparent")= index
+        +animeCard(anime)
