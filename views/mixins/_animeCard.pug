@@ -1,21 +1,30 @@
 mixin animeCard(anime)
-  .container.bg-teal-400.border-8.border-double
+  .container.border-8.border-double
     table(class="")
-      thead
-        tr
-          h2(class="")= anime.title
       tbody
         tr
           td(class="border px-4 py-2")
             a(href= anime.url )
               img(src= anime.image_url alt= anime.title)
-            p(class="text-sm text-gray-900 font-bold") Type: 
+            h3(class="border-b font-bold text-gray-800") Information
+            p(class="text-sm font-medium text-gray-900") Type: 
               span.font-normal= anime.type
+            p(class="text-sm font-medium text-gray-900") Episodes: 
+              span.font-normal= anime.episodes.toString()
+            p(class="text-sm font-medium text-gray-900") Airing: 
+              span.font-normal= anime.airing.toString()
+            - const startDate = new Date(anime.start_date)
+            - const endDate = new Date(anime.end_date)
+            p(class="text-sm font-medium text-gray-900") Start Date: 
+              span.font-normal= startDate.toLocaleDateString()
+            p(class="text-sm font-medium text-gray-900") End Date: 
+              span.font-normal= endDate.toLocaleDateString()
           td(class="border px-4 py-2")
             table
               tbody
                 tr
                   td
-                    h2.border-b.border-solid Synopsis
+                    h2(class="")= anime.title
+                    h3.border-b.border-solid Synopsis
                     p= anime.synopsis
     
