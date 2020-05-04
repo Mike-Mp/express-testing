@@ -1,12 +1,16 @@
 mixin animeCard(anime)
   .container.bg-teal-400.border-8.border-double
     table(class="")
+      thead
+        tr
+          h2(class="")= anime.title
       tbody
         tr
           td(class="border px-4 py-2")
             a(href= anime.url )
               img(src= anime.image_url alt= anime.title)
-            h2(class="")= anime.title
+            p(class="text-sm text-gray-900 font-bold") Type: 
+              span.font-normal= anime.type
           td(class="border px-4 py-2")
             table
               tbody
