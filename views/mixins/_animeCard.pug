@@ -24,10 +24,17 @@ mixin animeCard(anime)
               tbody
                 tr
                   td
-                    h2(class="font-bold text-gray-900")= anime.title
-                    div(class="bg-blue-300 w-16 text-center")
-                      h3(class="font-medium border-b italic text-gray-800") SCORE
-                      p(class="text-sm font-medium")= anime.score
+                    h2(class="font-bold text-gray-900 mb-2")= anime.title
+                    div(class="text-center mb-2 flex flex-row")
+                      div(class="")
+                        h3(class="font-medium border-b italic text-gray-800") SCORE
+                        p(class="text-sm font-medium")= anime.score.toString()
+                      div(class="ml-6")
+                        h3(class="font-medium border-b italic text-gray-800") MEMBERS
+                        p(class="text-sm font-medium")= anime.members.toString()
+                      div(class="ml-6")
+                        h3(class="font-medium border-b italic text-gray-800") RATED
+                        p(class="text-sm font-medium")= anime.rated
                     h3(class="border-b font-bold text-gray-800") Synopsis
                     p= anime.synopsis
                 
