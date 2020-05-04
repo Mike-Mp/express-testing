@@ -5,7 +5,7 @@ mixin animeCard(anime)
         tr
           td(class="border px-4 py-2")
             a(href= anime.url )
-              img(src= anime.image_url alt= anime.title)
+              img(src= anime.image_url alt= anime.title width="100px" height="200px")
             h3(class="border-b font-bold text-gray-800") Information
             p(class="text-sm font-medium text-gray-900") Type: 
               span.font-normal= anime.type
@@ -24,7 +24,7 @@ mixin animeCard(anime)
               tbody
                 tr
                   td
-                    h2(class="font-bold text-gray-900 mb-2")= anime.title
+                    h2(class="font-bold text-gray-900 mb-2 text-xl")= anime.title
                     div(class="text-center mb-2 flex flex-row")
                       div(class="")
                         h3(class="font-medium border-b italic text-gray-800") SCORE
