@@ -8,7 +8,9 @@ var routes = require("./routes/routes");
 
 var session = require("express-session");
 
-var flash = require("connect-flash"); // body parser
+var flash = require("connect-flash");
+
+var path = require("path"); // body parser
 
 
 app.use(express.json());
@@ -16,8 +18,10 @@ app.use(express.urlencoded({
   extended: true
 })); // view engine
 
-app.use(express["static"]("public"));
-app.set("view engine", "pug"); // Sessions
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug"); // static files
+
+app.use(express["static"](path.join(__dirname, "public"))); // Sessions
 
 app.use(session({
   cookie: {

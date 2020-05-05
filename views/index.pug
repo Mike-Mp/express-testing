@@ -6,7 +6,7 @@ block content
       label(for="searchTerm" class="block text-gray-700 text-sm font-bold mb-2") Search
       input(type="text" id="searchTerm" name="searchTerm" required class="shadow border rounded w-full mb-3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
       label(for="limit" class="block text-gray-700 text-sm font-bold mb-2") Result limit(16 is default)
-      input(type="number" id="limit" name="limit" class="shadow border rounded w-40 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline")
+      input(type="number" id="limit" max=50 min=1 name="limit" class="shadow border rounded w-40 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline")
       label(class="block text-gray-700 text-sm font-bold mb-2") Types:
       div(class="grid grid-cols-2 ")
         div()

@@ -1,0 +1,1 @@
+"use strict";var topBtn=document.getElementById("topBtn");function scrollFunction(){300<document.body.scrollTop||300<document.documentElement.scrollTop?topBtn.style.display="block":topBtn.style.display="none"}function topFunction(){document.body.scrollTop=0,document.documentElement.scrollTop=0}window.onscroll=function(){scrollFunction()};

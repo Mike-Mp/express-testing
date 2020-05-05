@@ -3,14 +3,18 @@ const app = express();
 const routes = require("./routes/routes");
 const session = require("express-session");
 const flash = require("connect-flash");
+const path = require("path");
 
 // body parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // view engine
-app.use(express.static("public"));
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
+
+// static files
+app.use(express.static(path.join(__dirname, "public")));
 
 // Sessions
 app.use(

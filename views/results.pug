@@ -2,7 +2,10 @@ extends layout
 include mixins/_animeCard
 block content
   .container.mx-auto.mt-4.p-4
+    p(class="text-center bg-teal-500 text-teal-100 border rounded mb-2 w-full shadow-sm") Results #{results.length.toString()}
+
+    button(onclick="topFunction()" id="topBtn" title="To top" class="fixed inset-x-0 top-0 bg-teal-500 rounded-lg hidden hover:bg-teal-600 text-white font-bold py-2 px-4") Top
+    script(src="./javascripts/topBtn.js" async defer)
     each anime,index in results
       .container
-        //- h3(class="border border-transparent")= index
         +animeCard(anime)
