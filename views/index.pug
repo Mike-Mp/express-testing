@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  .w-full.max-w-lg.mx-auto
+  .w-full.max-w-lg.mx-auto.mt-5
     form(action="/data" method="GET" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4")
       label(for="searchTerm" class="block text-gray-700 text-sm font-bold mb-2") Search
       input(type="text" id="searchTerm" name="searchTerm" required class="shadow border rounded w-full mb-3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
