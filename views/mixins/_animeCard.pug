@@ -16,9 +16,9 @@ mixin animeCard(anime)
             - const startDate = new Date(anime.start_date)
             - const endDate = new Date(anime.end_date)
             p(class="text-sm font-medium text-gray-900") Start Date: 
-              span.font-normal= startDate.toLocaleDateString()
+              span.font-normal.block= startDate.toLocaleDateString()
             p(class="text-sm font-medium text-gray-900") End Date: 
-              span.font-normal= endDate.toLocaleDateString()
+              span.font-normal.block= endDate.toLocaleDateString()
           td(class="border px-4 py-2")
             table
               tbody
