@@ -1,6 +1,6 @@
 # express testing
 
-A nodejs project. It's only purpose is to practice express, mongodb, tailwindcss and APIs.
+A nodejs project. It's only purpose is to practice express, mongodb, tailwindcss and the Jikan API.
 
 [see on heroku](https://shielded-everglades-39145.herokuapp.com/)
 
