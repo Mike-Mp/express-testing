@@ -20,22 +20,49 @@ mixin animeCard(anime)
             p(class="text-sm font-medium text-gray-900") End Date: 
               span.font-normal.block= endDate.toLocaleDateString()
           td(class="border px-4 py-2")
-            table
+            table(class="table-fixed w-full")
               tbody
                 tr
-                  td
+                  td(class="w-full")
                     h2(class="font-bold text-gray-900 mb-2 text-xl")= anime.title
                     div(class="text-center mb-2 flex flex-row")
                       div()
                         h3(class="font-medium border-b-2 italic text-gray-800") SCORE
-                        p(class="text-sm font-medium")= anime.score.toString()
+                        - let scoreColor;
+                        if anime.score > 9
+                          - scoreColor = "green-600"
+                        else if anime.score > 7 && anime.score < 9
+                          - scoreColor = "blue-600"
+                        else if anime.score > 4 && anime.score < 7
+                          - scoreColor = "yellow-600"
+                        else if anime.score > 1 && anime.score < 4
+                          - scoreColor = "red-600"
+                        p(class=`text-sm font-medium text-${scoreColor}`)= anime.score.toString()
                       div(class="ml-6")
                         - function formatNumber(n) {return n.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
                         h3(class="font-medium border-b-2 italic text-gray-800") MEMBERS
-                        p(class="text-sm font-medium")= formatNumber(anime.members)
+                        - let membersColor;
+                        if anime.members > 2000000
+                          - membersColor = "green-600"
+                        else if anime.members < 2000000 && anime.members > 1000000
+                          - membersColor = "blue-600"
+                        p(class=`text-sm font-medium text-${membersColor}`)= formatNumber(anime.members)
                       div(class="ml-6")
                         h3(class="font-medium border-b-2 italic text-gray-800") RATED
-                        p(class="text-sm font-medium")= anime.rated
+                        - let ratedColor;
+                        if anime.rated === "R+"
+                          - ratedColor = "red-600"
+                        else if anime.rated === "R"
+                          - ratedColor = "yellow-600"
+                        else if anime.rated === "PG-13"
+                          - ratedColor = "blue-600"
+                        else if anime.rated ===  "PG"
+                          - ratedColor = "blue-400"
+                        else if anime.rated === "G"
+                          - ratedColor = "green-600"
+                        else if anime.rated === "Rx"
+                          - ratedColor = "pink-400"
+                        p(class=`text-sm font-medium text-${ratedColor}`)= anime.rated
                     h3(class="border-b-2 font-bold text-gray-800") Synopsis
                     p= anime.synopsis
                 
