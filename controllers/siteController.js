@@ -4,6 +4,10 @@ exports.homePage = (req, res) => {
   res.render("index", { title: "Index" });
 };
 
+exports.aboutPage = (req, res) => {
+  res.render("about", { title: "About" });
+};
+
 exports.getData = async (req, res) => {
   const searchTerm = `q=${req.query.searchTerm}`;
   const limit = req.query.limit || 16;

@@ -8,6 +8,12 @@ exports.homePage = function (req, res) {
   });
 };
 
+exports.aboutPage = function (req, res) {
+  res.render("about", {
+    title: "About"
+  });
+};
+
 exports.getData = function _callee(req, res) {
   var searchTerm, limit, limitString, baseUrl, typeString, results;
   return regeneratorRuntime.async(function _callee$(_context) {
