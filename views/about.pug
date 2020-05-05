@@ -1,14 +1,14 @@
 extends layout
 
 block content
-  .container.mx-auto.mt-5
-    h1(class="text-xl border-b-4 border-double")= title
-    .container.text-center.mt-2
+  div(class="container mx-auto mt-5 flex flex-col lg:block")
+    h1(class="text-xl border-b-4 border-double self-center")= title
+    div(class="container text-center mt-2")
       p The purpose of this project is to play around with express, tailwindcss, mongodb and APIs.
-    h2(class="text-md border-b-4 border-double") Pointers
-    .container.text-center.mt-2
-      h3(class="text-sm") Ratings
-      .container.grid.grid-cols-2.gap-10
+    h2(class="text-md border-b-4 border-double mt-2 self-center") Pointers
+    div(class="container text-center mt-2")
+      h3(class="text-sm mb-1") Ratings
+      div(class="container flex flex-col align-start md:grid md:grid-cols-1 lg:grid-cols-2 md:gap-10")
         p(class="text-green-600") G - All Ages
         p(class="text-blue-400") PG - Children
         p(class="text-blue-600") PG-13 - Teens 13 or older
