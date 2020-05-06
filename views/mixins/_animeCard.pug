@@ -63,6 +63,6 @@ mixin animeCard(anime)
                         else if anime.rated === "Rx"
                           - ratedColor = "text-pink-400"
                         p(class=`text-sm font-medium ${ratedColor}`)= anime.rated
-                    h3(class="border-b-2 font-bold text-gray-800") Synopsis
-                    p= anime.synopsis
+                    h3(class="hidden md:block border-b-2 font-bold text-gray-800") Synopsis
+                    p(class="hidden md:block")= anime.synopsis
                 
