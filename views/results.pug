@@ -4,7 +4,7 @@ block content
   .container.mx-auto.mt-4.p-4
     p(class="text-center bg-teal-500 text-teal-100 border rounded mb-2 w-full shadow-sm") #{results.length.toString()} results
 
-    button(onclick="topFunction()" id="topBtn" title="To top" class="fixed outline-none w-full inset-x-0 bottom-0 lg:inset-y-0 lg:right-0 hidden bg-teal-200 text-teal-500 text-4xl font-bold py-2 px-4") &#8673;
+    button(onclick="topFunction()" id="topBtn" title="To top" class="fixed w-full lg:object-right outline-none lg:inset-x-0 lg:right-0 inset-x-0 bottom-0 hidden bg-teal-200 text-teal-500 text-4xl font-bold py-2 px-4") &#8673;
     script(src="./javascripts/topBtn.js" async defer)
     each anime,index in results
       .container
