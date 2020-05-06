@@ -24,7 +24,8 @@ mixin animeCard(anime)
               tbody
                 tr
                   td(class="w-full")
-                    h2(class="font-bold text-gray-900 mb-2 text-xl")= anime.title
+                    a(href=anime.url class="md:inline-block md:w-16 text-center sm:text-left" target="_blank")
+                      h2(class="font-semibold md:font-bold text-gray-800 mb-2 text-xl")= anime.title
                     div(class="text-center mb-2 flex flex-col sm:flex-row")
                       div()
                         h3(class="font-medium border-b-2 italic text-gray-800") SCORE
